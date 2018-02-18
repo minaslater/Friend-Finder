@@ -1,8 +1,9 @@
 module.exports = function(app) {
-
+  var data = require("../data/friends.js");
   app.get("/api/friends", function (req, res) {
     // res.json(characters);
-    res.send("all the friends");
+    // res.send("all the friends");
+    res.json(data);
   });
 
   // Search for Specific Character (or all characters) - provides JSON
