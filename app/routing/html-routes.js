@@ -6,6 +6,6 @@ module.exports = function(app) {
 
   app.get("/survey", function (req, res) {
     res.sendFile("/survey.html", {root: "./app/public"});
-    res.send("survey");
+    // res.send("survey");
   });
 }
