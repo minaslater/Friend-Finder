@@ -14,6 +14,8 @@ var PORT = 3000;
 require("./routing/api-routes.js")(app);
 require("./routing/html-routes.js")(app);
 
+// Sets up to serve assets from public folder
+app.use(express.static(path.join(__dirname, 'public')));
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
