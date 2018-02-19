@@ -1,10 +1,5 @@
 module.exports = function(app) {
-  var bodyParser = require("body-parser");
   var data = require("../data/friends.js");
-
-  // Sets up the Express app to handle data parsing
-  app.use(bodyParser.urlencoded({ extended: false }));
-  app.use(bodyParser.json());
 
   app.get("/api/friends", function (req, res) {
     res.json(data);
@@ -12,8 +7,8 @@ module.exports = function(app) {
 
   // Search for Specific Character (or all characters) - provides JSON
   app.post("/api/friends", function (req, res) {
-    var friendSeeker = req.body;
-    console.log(req.body);
+    var friendSeeker = JSON.parse(req.body.scores);
+
 
     // if (chosen) {
     //   console.log(chosen);
@@ -26,6 +21,6 @@ module.exports = function(app) {
     //   return res.json(false);
     // }
     // return res.json(characters);
-    res.send(friendSeeker);
+    res.json(friendSeeker);
   });
 }
