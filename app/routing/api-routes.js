@@ -1,3 +1,11 @@
+function totalDiff(array1, array2) {
+  var totalDifference = 0;
+  for(var j = 0; j < array1.length; j++) {
+    totalDifference += Math.abs(array1[j] - array2[j]);
+  }
+  return totalDifference;
+}
+
 module.exports = function(app) {
   var data = require("../data/friends.js");
 
@@ -7,20 +15,17 @@ module.exports = function(app) {
 
   // Search for Specific Character (or all characters) - provides JSON
   app.post("/api/friends", function (req, res) {
-    var friendSeeker = JSON.parse(req.body.scores);
-
-
-    // if (chosen) {
-    //   console.log(chosen);
-
-    //   for (var i = 0; i < characters.length; i++) {
-    //     if (chosen === characters[i].routeName) {
-    //       return res.json(characters[i]);
-    //     }
-    //   }
-    //   return res.json(false);
-    // }
-    // return res.json(characters);
-    res.json(friendSeeker);
+    var seekerData = JSON.parse(req.body.scores);
+    var currentMatch = 0;
+    var currentLowest = 20;
+    
+    for(var i = 0; i < data.length; i++) {
+      var difference = totalDiff(data[i].scores, seekerData);
+      if (difference < currentLowest) {
+        currentLowest = difference;
+        currentMatch = i;
+      }
+    }
+    res.json(data[currentMatch]);
   });
 }
