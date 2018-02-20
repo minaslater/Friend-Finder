@@ -1,10 +1,16 @@
 $("#submit-btn").on("click", function() {
   event.preventDefault();
+  
+  var scoresArray = [];
 
-  var friendSeeker = {
-    scores: JSON.stringify([5, 4, 2, 2, 4, 1, 5, 4, 3, 4])
+  for (var i = 0; i < 10; i++) {
+    scoresArray.push($("#question-" + (i+1)).val() * 1);
   }
 
-  $.post("/api/friends", friendSeeker)
+  var requestData = {
+    scores: JSON.stringify(scoresArray)
+  };
+
+  $.post("/api/friends", requestData)
     .then((data) => console.log(data));
 });
