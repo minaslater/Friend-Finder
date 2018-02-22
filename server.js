@@ -14,11 +14,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Sets up to serve assets from public folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'app/public')));
 
 // Pulls in external routes
-require("./routing/api-routes.js")(app);
-require("./routing/html-routes.js")(app);
+require("./app/routing/api-routes.js")(app);
+require("./app/routing/html-routes.js")(app);
 
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
