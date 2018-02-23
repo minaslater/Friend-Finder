@@ -4,7 +4,7 @@ module.exports = [{
     photo: "images/boo.jpg",
     scores: [2, 1, 1, 5, 5, 5, 1, 2, 4, 2],
   }, {
-    name: "Men's Wear Dog",
+    name: "Menswear Dog",
     link: "https://www.instagram.com/mensweardog/?hl=en",
     photo: "images/mens-wear.jpg",
     scores: [5, 1, 1, 4, 3, 3, 1, 2, 1, 1],
