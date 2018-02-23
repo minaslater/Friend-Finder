@@ -13,8 +13,6 @@ $("#submit-btn").on("click", function() {
 
   $.post("/api/friends", requestData)
     .then((data) => {
-      console.log(data);
-      
       var link = $("<a>");
       var image = $("<img>");
       link.attr("href", data.link);

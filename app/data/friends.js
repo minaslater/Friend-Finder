@@ -1,7 +1,7 @@
 module.exports = [{
     name: "Boo the Dog",
     link: "https://www.instagram.com/buddyboowaggytails/?hl=en",
-    photo: "images/boo.jpg",
+    photo: "images/boo.png",
     scores: [2, 1, 1, 5, 5, 5, 1, 2, 4, 2],
   }, {
     name: "Menswear Dog",
