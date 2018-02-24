@@ -4,7 +4,7 @@ A compatibility-based match-making application. This full-stack site will take i
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Depolyed via Heroku [here](https://github.com/minaslater/Friend-Finder).
 
 ## Built With
 
@@ -12,9 +12,11 @@ Add additional notes about how to deploy this on a live system
 * [jQuery](https://jquery.com/) - Dom manipulation, event-handling and Ajax
 * [Express.js](https://expressjs.com/) - Used to initialize the server
 
-## Contributing
+## Planning
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Flowchart for comparison logic:
+
+![flowchart](wireframe.jpg) <!-- .element height="30%" width="30%" -->
 
 ## Authors
 
@@ -26,4 +28,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose Instagram profiles are featured
+* Hat tip to anyone whose Instagram profiles are featured.
