@@ -1,4 +1,4 @@
-# Instragram Pet Finder
+# Instagram Pet Finder
 
 A compatibility-based match-making application. This full-stack site will take in results from user surveys, then compare their answers with those in an existing database. The app will then display the name, link and picture of the pet instagram profile with the best overall match.
 
